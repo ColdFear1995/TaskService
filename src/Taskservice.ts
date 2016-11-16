@@ -40,6 +40,7 @@ class TaskService {
 				console.log("Task cannot be found");
 		}
 	}
+
 	public during(id: string) {
 		var task: Task;
 		task = taskSearch(this.taskList, id);
@@ -49,6 +50,7 @@ class TaskService {
 			default:
 		}
 	}
+
     public addTask(id: string) {
 		var task: Task;
 		task = taskSearch(this.taskList, id);
@@ -60,13 +62,13 @@ class TaskService {
 				this.Notify(task);
                 break;
         }
-
 	}
 
 	getTaskByCustomRole(rule: Function, Id: string): Task {
 		return rule(this.taskList, Id);
 
 	}
+	
 	checkTaskRules(task: Task, npcId: string, NPCtalkpanel: NPCTalkPanel) {
         switch (task.status) {
             case TaskStatus.ACCEPTABLE:
