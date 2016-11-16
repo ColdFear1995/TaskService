@@ -1,7 +1,7 @@
 var TaskPanel = (function () {
     function TaskPanel(stage, taskService) {
         this.backColor = 0xFFFAFA;
-        this.panelX = 300;
+        this.panelX = 400;
         this.panelY = 100;
         this.panelWidth = 200;
         this.panelHeight = 300;
@@ -21,8 +21,8 @@ var TaskPanel = (function () {
         this.buttonWidth = 130;
         this.buttonHeight = 70;
         this.buttonTextFieldText = "无任务";
-        this.buttonTextFieldX = this.buttonX + 5;
-        this.buttonTextFieldY = this.buttonY + 10;
+        this.buttonTextFieldX = this.buttonX + 20;
+        this.buttonTextFieldY = this.buttonY + 20;
         this.buttonTextFieldWidth = 120;
         this.buttonTextFieldColor = 0xFFFAFA;
         this.stage = stage;

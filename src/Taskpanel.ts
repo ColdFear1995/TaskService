@@ -10,7 +10,7 @@ class TaskPanel implements Observer {
 
 	private backColor = 0xFFFAFA;
 	private backGround: egret.Shape;
-	private panelX = 300;
+	private panelX = 400;
 	private panelY = 100;
 	private panelWidth = 200;
 	private panelHeight = 300;
@@ -40,8 +40,8 @@ class TaskPanel implements Observer {
 
 	private buttonTextField: egret.TextField;
 	private buttonTextFieldText = "无任务";
-	private buttonTextFieldX = this.buttonX + 5;
-	private buttonTextFieldY = this.buttonY + 10;
+	private buttonTextFieldX = this.buttonX + 20;
+	private buttonTextFieldY = this.buttonY + 20;
 	private buttonTextFieldWidth = 120;
 	private buttonTextFieldColor = 0xFFFAFA;
 

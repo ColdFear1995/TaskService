@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,1_02_gif,1_03_gif,ACCEPTABLE_png,CANSUBMITTED_png,DURING_png",
+			"keys": "description_json,1_02_gif,1_03_gif,ACCEPTABLE_png,CANSUBMITTED_png,DURING_png,bg_jpg",
 			"name": "preload"
 		}
 	],
@@ -35,6 +35,11 @@
 			"name": "DURING_png",
 			"type": "image",
 			"url": "assets/DURING.png"
+		},
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
 		}
 	]
 }

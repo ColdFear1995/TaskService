@@ -117,9 +117,17 @@ class Main extends egret.DisplayObjectContainer {
      * Create a game scene
      */
     private createGameScene(): void {
+
         this.touchEnabled = true;
 
         var taskService = new TaskService();
+
+        var sky:egret.Bitmap = this.createBitmapByName("bg_jpg");
+        this.addChild(sky);
+        var stageW:number = this.stage.stageWidth;
+        var stageH:number = this.stage.stageHeight;
+        sky.width = stageW;
+        sky.height = stageH;
 
         var taskPanel = new TaskPanel(this, taskService);
         var npctalkpanel=new NPCTalkPanel(this,taskService);
@@ -140,6 +148,21 @@ class Main extends egret.DisplayObjectContainer {
         npc_1.getTask();
 
 
+    }
+
+
+
+
+
+        /**
+     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
+     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
+     */
+    private createBitmapByName(name:string):egret.Bitmap {
+        var result = new egret.Bitmap();
+        var texture:egret.Texture = RES.getRes(name);
+        result.texture = texture;
+        return result;
     }
 }
 
