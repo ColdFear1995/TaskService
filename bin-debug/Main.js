@@ -103,34 +103,19 @@ var Main = (function (_super) {
     p.createGameScene = function () {
         this.touchEnabled = true;
         var taskService = new TaskService();
-        var sky = this.createBitmapByName("bg_jpg");
-        this.addChild(sky);
-        var stageW = this.stage.stageWidth;
-        var stageH = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
         var taskPanel = new TaskPanel(this, taskService);
-        var npctalkpanel = new NPCTalkPanel(this, taskService);
-        var npc_0 = new NPC("npc_0", "NPC_1", taskService, npctalkpanel);
+        var dialoguepanel = new DialoguePanel(this, taskService);
+        var mockkillmonsterbutton = new MockKillMonsterButton(this, taskService);
+        var npc_0 = new NPC("npc_0", "NPC_1", taskService, dialoguepanel, mockkillmonsterbutton);
         npc_0.setNpc(0, 100, 0x800080);
         npc_0.drawNpc();
         this.addChild(npc_0.npcStage);
         npc_0.getTask();
-        var npc_1 = new NPC("npc_1", "NPC_2", taskService, npctalkpanel);
+        var npc_1 = new NPC("npc_1", "NPC_2", taskService, dialoguepanel, mockkillmonsterbutton);
         npc_1.setNpc(200, 100, 0x0000FF);
         npc_1.drawNpc();
         this.addChild(npc_1.npcStage);
         npc_1.getTask();
-    };
-    /**
- * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
- * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
- */
-    p.createBitmapByName = function (name) {
-        var result = new egret.Bitmap();
-        var texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
     };
     return Main;
 }(egret.DisplayObjectContainer));

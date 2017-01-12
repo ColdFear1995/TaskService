@@ -4,10 +4,8 @@ var TaskNoneState = (function () {
     }
     var d = __define,c=TaskNoneState,p=c.prototype;
     p.onEnter = function () {
-        console.log("Enter Task None State");
     };
     p.onExit = function () {
-        console.log("Exit Task None State");
     };
     return TaskNoneState;
 }());
@@ -99,4 +97,4 @@ var TaskSubmitState = (function () {
     return TaskSubmitState;
 }());
 egret.registerClass(TaskSubmitState,'TaskSubmitState',["State"]);
-//# sourceMappingURL=NPCstate.js.map
+//# sourceMappingURL=NPCState.js.map

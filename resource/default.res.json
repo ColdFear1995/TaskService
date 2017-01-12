@@ -1,25 +1,30 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,1_02_gif,1_03_gif,ACCEPTABLE_png,CANSUBMITTED_png,DURING_png,bg_jpg",
+			"keys": "bg_jpg,egret_icon_png,description_json,UNACCEPTABLE_png,ACCEPTABLE_png,CANSUBMITTED_png,DURING_png,NPC01_png,NPC02_png",
 			"name": "preload"
 		}
 	],
 	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
 		{
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"
 		},
 		{
-			"name": "1_02_gif",
+			"name": "UNACCEPTABLE_png",
 			"type": "image",
-			"url": "assets/1_02.gif"
-		},
-		{
-			"name": "1_03_gif",
-			"type": "image",
-			"url": "assets/1_03.gif"
+			"url": "assets/UNACCEPTABLE.png"
 		},
 		{
 			"name": "ACCEPTABLE_png",
@@ -37,9 +42,14 @@
 			"url": "assets/DURING.png"
 		},
 		{
-			"name": "bg_jpg",
+			"name": "NPC01_png",
 			"type": "image",
-			"url": "assets/bg.jpg"
+			"url": "assets/NPC01.png"
+		},
+		{
+			"name": "NPC02_png",
+			"type": "image",
+			"url": "assets/NPC02.png"
 		}
 	]
 }
